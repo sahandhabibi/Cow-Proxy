@@ -1,0 +1,10 @@
+version: "3"
+services:
+  cow-proxy:
+    build: .
+    image: cow-proxy:latest
+    ports:
+      - "7777:7777"
+    volumes:
+      - "./config:/root/.cow/rc"
+    restart: always
