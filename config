@@ -1,0 +1,31 @@
+
+proxy = http://user:password@127.0.0.1:8080
+
+listen = http://0.0.0.0:7777
+
+logFile = /dev/stderr
+
+userPasswd = user:password
+
+tunnelAllowedPort = 80, 443
+
+authTimeout = 1m
+
+alwaysProxy = true
+
+The line at the beginning of # is a comment and will be ignored
+# Local HTTP proxy address
+# Please fill in this address when configuring HTTP and HTTPS proxy
+# If there is an option to use the proxy for all protocols when configuring the proxy, and you don’t know the meaning of this option, please check it
+# Or fill in http://127.0.0.1:7777/pac in the automatic proxy configuration
+listen = http://127.0.0.1:7777
+
+# SOCKS5 secondary proxy
+proxy = socks5://127.0.0.1:1080
+# HTTP secondary proxy
+proxy = http://127.0.0.1:8080
+proxy = http://user:password@127.0.0.1:8080
+# shadowsocks secondary agent
+proxy = ss://aes-128-cfb:password@1.2.3.4:8388
+# cow secondary agent
+proxy = cow://aes-128-cfb:password@1.2.3.4:8388
